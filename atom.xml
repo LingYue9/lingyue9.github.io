@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>翎月的博客</title>
-  <icon>https://www.gravatar.com/avatar/1b1060c5a2544f4ae03788a00f7c2c93</icon>
-  <subtitle>胆小认生，不易相处</subtitle>
+  <icon>https://www.gravatar.com/avatar/76bc7cba0dec51b879a19d3dd460bc34</icon>
+  <subtitle>如无必要，勿增实体</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lingyue9.github.io/"/>
@@ -11,7 +11,7 @@
   
   <author>
     <name>翎月</name>
-    <email>litten225@qq.com</email>
+    <email>trial_9@outlook.com</email>
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
