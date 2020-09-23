@@ -182,14 +182,33 @@ var _hmt = _hmt || [];
         <h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><pre><code>JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意方法和属性；这种动态获取信息以及动态调用对象方法的功能称为java语言的反射机制。
 </code></pre><h2 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h2><pre><code>在日常的第三方应用开发过程中，经常会遇到某个类的某个成员变量、方法或是属性是私有的或是只对系统应用开放，这时候就可以利用Java的反射机制通过反射来获取所需的私有成员或是方法。当然，也不是所有的都适合反射，之前就遇到通过反射得到的结果与预期不符。而后阅读源码发现，经过层层调用后在最终返回结果的地方对应用的权限进行了校验，对于没有权限的应用返回值是没有意义的缺省值，否则返回实际值起到保护用户的隐私目的。
 </code></pre><h2 id="反射机制的相关类"><a href="#反射机制的相关类" class="headerlink" title="反射机制的相关类"></a>反射机制的相关类</h2><pre><code>与Java反射相关的类如下：
-
-类名|用途
-:--|:--
-Class类|代表类的实体，在运行的Java应用程序中表示类和接口
-Field类|代表类的成员变量（类的属性）
-Method类|代表类的方法
-Constructor类|代表类的构造方法
-</code></pre><h1 id="Class类"><a href="#Class类" class="headerlink" title="Class类"></a>Class类</h1><p>Class代表类的实体，在运行的Java应用程序中表示类和接口。在这个类中提供了很多有用的方法，这里对他们简单的分类介绍。</p>
+</code></pre><table>
+<thead>
+<tr>
+<th style="text-align:left">类名</th>
+<th style="text-align:left">用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Class类</td>
+<td style="text-align:left">代表类的实体，在运行的Java应用程序中表示类和接口</td>
+</tr>
+<tr>
+<td style="text-align:left">Field类</td>
+<td style="text-align:left">代表类的成员变量（类的属性）</td>
+</tr>
+<tr>
+<td style="text-align:left">Method类</td>
+<td style="text-align:left">代表类的方法</td>
+</tr>
+<tr>
+<td style="text-align:left">Constructor类</td>
+<td style="text-align:left">代表类的构造方法</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Class类"><a href="#Class类" class="headerlink" title="Class类"></a>Class类</h3><p>Class代表类的实体，在运行的Java应用程序中表示类和接口。在这个类中提供了很多有用的方法，这里对他们简单的分类介绍。</p>
 <hr>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="https://www.jianshu.com/p/9be58ee20dee" target="_blank" rel="noopener">https://www.jianshu.com/p/9be58ee20dee</a></p>
 
