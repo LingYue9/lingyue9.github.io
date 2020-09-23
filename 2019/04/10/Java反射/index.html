@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="翎月的博客">
 <meta property="og:description" content="Java反射定义JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意方法和属性；这种动态获取信息以及动态调用对象方法的功能称为java语言的反射机制。 用途在日常的第三方应用开发过程中，经常会遇到某个类的某个成员变量、方法或是属性是私有的或是只对系统应用开放，这时候就可以利用Java的反射机制通过反射来获取所需的私有成员或是方法。当">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-09-23T16:11:42.271Z">
+<meta property="og:updated_time" content="2020-09-23T16:13:05.164Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java反射">
 <meta name="twitter:description" content="Java反射定义JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意方法和属性；这种动态获取信息以及动态调用对象方法的功能称为java语言的反射机制。 用途在日常的第三方应用开发过程中，经常会遇到某个类的某个成员变量、方法或是属性是私有的或是只对系统应用开放，这时候就可以利用Java的反射机制通过反射来获取所需的私有成员或是方法。当">
@@ -458,7 +458,7 @@ var _hmt = _hmt || [];
 <p>在阅读Class类文档时发现一个特点，以通过反射获得Method对象为例，一般会提供四种方法，getMethod(parameterTypes)、getMethods()、getDeclaredMethod(parameterTypes)和getDeclaredMethods()。getMethod(parameterTypes)用来获取某个公有的方法的对象，getMethods()获得该类所有公有的方法，getDeclaredMethod(parameterTypes)获得该类某个方法，getDeclaredMethods()获得该类所有方法。带有Declared修饰的方法可以反射到私有的方法，没有Declared修饰的只能用来反射公有的方法。其他的Annotation、Field、Constructor也是如此。</p>
 <p>在ReflectClass类中还提供了两种反射PowerManager.shutdown()的方法，在调用的时候会输出如下log，提示没有相关权限。之前在项目中尝试反射其他方法的时候还遇到过有权限和没权限返回的值不一样的情况。如果源码中明确进行了权限验证，而你的应用又无法获得这个权限的话，建议就不要反射了。</p>
 <hr>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>《Java核心技术》 \<br><a href="https://www.jianshu.com/p/9be58ee20dee" target="_blank" rel="noopener">Java高级特性——反射</a> \<br><a href="http://blog.qiji.tech/archives/4374" target="_blank" rel="noopener">认识反射机制（Reflection）</a> \<br><a href="https://www.cnblogs.com/mengdd/archive/2013/01/26/2877972.html" target="_blank" rel="noopener">Java 反射机制</a> </p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>《Java核心技术》<br><a href="https://www.jianshu.com/p/9be58ee20dee" target="_blank" rel="noopener">Java高级特性——反射</a><br><a href="http://blog.qiji.tech/archives/4374" target="_blank" rel="noopener">认识反射机制（Reflection）</a><br><a href="https://www.cnblogs.com/mengdd/archive/2013/01/26/2877972.html" target="_blank" rel="noopener">Java 反射机制</a></p>
 
       
 
