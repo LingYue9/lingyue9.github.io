@@ -6,16 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://lingyue9.github.io">
-  <title>Archives: 2019 | 翎月的博客</title>
+  <title>Java反射 | 翎月的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="前端,java,网络技术,javascript,html5,开发者,程序猿,极客,编程,代码">
-<meta property="og:type" content="website">
-<meta property="og:title" content="翎月的博客">
-<meta property="og:url" content="https://lingyue9.github.io/archives/2019/index.html">
+  <meta name="description" content="定义JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意方法和属性；这种动态获取信息以及动态调用对象方法的功能称为java语言的反射机制。 用途在日常的第三方应用开发过程中，经常会遇到某个类的某个成员变量、方法或是属性是私有的或是只对系统应用开放，这时候就可以利用Java的反射机制通过反射来获取所需的私有成员或是方法。当然，也不是所">
+<meta name="keywords" content="前端,java,网络技术,javascript,html5,开发者,程序猿,极客,编程,代码">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java反射">
+<meta property="og:url" content="https://lingyue9.github.io/2019/04/10/Java反射/index.html">
 <meta property="og:site_name" content="翎月的博客">
+<meta property="og:description" content="定义JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意方法和属性；这种动态获取信息以及动态调用对象方法的功能称为java语言的反射机制。 用途在日常的第三方应用开发过程中，经常会遇到某个类的某个成员变量、方法或是属性是私有的或是只对系统应用开放，这时候就可以利用Java的反射机制通过反射来获取所需的私有成员或是方法。当然，也不是所">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2020-09-23T14:55:10.686Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="翎月的博客">
+<meta name="twitter:title" content="Java反射">
+<meta name="twitter:description" content="定义JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意方法和属性；这种动态获取信息以及动态调用对象方法的功能称为java语言的反射机制。 用途在日常的第三方应用开发过程中，经常会遇到某个类的某个成员变量、方法或是属性是私有的或是只对系统应用开放，这时候就可以利用Java的反射机制通过反射来获取所需的私有成员或是方法。当然，也不是所">
   
     <link rel="alternative" href="/atom.xml" title="翎月的博客" type="application/atom+xml">
   
@@ -157,76 +161,144 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Java反射" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Java反射
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/10/Java反射/" class="archive-article-date">
+
+        
+        <a href="/2019/04/10/Java反射/" class="archive-article-date">
   	<time datetime="2019-04-10T02:30:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-10</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/10/Java反射/">Java反射</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><pre><code>JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意方法和属性；这种动态获取信息以及动态调用对象方法的功能称为java语言的反射机制。
+</code></pre><h2 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h2><pre><code>在日常的第三方应用开发过程中，经常会遇到某个类的某个成员变量、方法或是属性是私有的或是只对系统应用开放，这时候就可以利用Java的反射机制通过反射来获取所需的私有成员或是方法。当然，也不是所有的都适合反射，之前就遇到通过反射得到的结果与预期不符。而后阅读源码发现，经过层层调用后在最终返回结果的地方对应用的权限进行了校验，对于没有权限的应用返回值是没有意义的缺省值，否则返回实际值起到保护用户的隐私目的。
+</code></pre><h2 id="反射机制的相关类"><a href="#反射机制的相关类" class="headerlink" title="反射机制的相关类"></a>反射机制的相关类</h2><pre><code>与Java反射相关的类如下：
+| 类名 | 用途 |
+| ---- | ---- |
+| Class类 | 代表类的实体，在运行的Java应用程序中表示类和接口 |
+| Field类 | 代表类的成员变量（类的属性） |
+| Method类 | 代表类的方法 |
+| Constructor类 | 代表类的构造方法 |
+</code></pre><h1 id="Class类"><a href="#Class类" class="headerlink" title="Class类"></a>Class类</h1><p>Class代表类的实体，在运行的Java应用程序中表示类和接口。在这个类中提供了很多有用的方法，这里对他们简单的分类介绍。</p>
+<hr>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="https://www.jianshu.com/p/9be58ee20dee" target="_blank" rel="noopener">https://www.jianshu.com/p/9be58ee20dee</a></p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACK0lEQVR42u3aQW4DIQwF0Nz/0tNNF5GaSb4xqQQ8VtV0OvCoZBnjxyMe19O4e/782+tm/P3bZJZpAwMDY1nG9XZ0lps8Gfv+CyoGBsYBjLsIlgfHZHHvl5vMe/scAwMDIw6j1fBa3T4MDAyM6ufyZeUkDAwMjM4htnPgzBf39bM4BgbGgoy86v7/P3/lfgMDA2MpxlUcebk/Ocr21/P7TQwMjK0ZeYCbVWLrlOE+vImBgXEMo9Nm0VlQvgWDH8LAwFiWkZT7xybOi3TJZn2YFwMDY2tGtaBfvc5MEsT8OjNKDTEwMDZlVC8GZjVbjIFbF5kYGBgLMvLwOtZI0SnGFQIrBgbGAYy5rRj9wF1NJTEwMPZmdNod8sJc5/JyMBBjYGBsyuhcZFabNqqH2MIpHAMDY1NGnq5N3rm4bFfuGcHAwNiIMdbO1W9d7aSPL97BwMDYmlEtaVUDbn4wHks0H2OVOQwMjAUZ7wNftRjXaaTIS3gYGBgnM/qFsOo2VUmDVUMMDIzFGXlBvzpxkvaNMV68j4GBcSSjc+CcdbVZODxjYGAcyagGvjztS1rNqqEfAwNjV8ZVHNUGi2rSmaehL/4PGBgYmzI6N4PVkn0VVg3xGBgYezPG2iBm7VOn+RUDA+M0xmA5vnjEzVPPcuDGwMDAKLaI9Q+6+XUpBgYGxtzkLw/KefqIgYFxDiMJndWSfTWwto7KGBgYWzM6RbFZzRn5XK2LTAwMjPUYP9U8S6l9KbF/AAAAAElFTkSuQmCC" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/21/我的第一篇博客文章/" class="archive-article-date">
-  	<time datetime="2019-03-21T02:30:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-21</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/03/21/我的第一篇博客文章/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">我的第一篇博客文章</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/21/我的第一篇博客文章/">我的第一篇博客文章</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -249,8 +321,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
