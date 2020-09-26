@@ -6,16 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://lingyue9.github.io">
-  <title>Archives: 2019/4 | 翎月的博客</title>
+  <title>C3P0连接MySQL的一些问题 | 翎月的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="前端,java,网络技术,javascript,html5,开发者,程序猿,极客,编程,代码">
-<meta property="og:type" content="website">
-<meta property="og:title" content="翎月的博客">
-<meta property="og:url" content="https://lingyue9.github.io/archives/2019/04/index.html">
+  <meta name="description" content="在最近下载了最新版本的MySQL(5.7.31)后，使用C3P0连接MySQL数据库时报错：1java.sql.SQLException: Connections could not be acquired from the underlying database!">
+<meta name="keywords" content="前端,java,网络技术,javascript,html5,开发者,程序猿,极客,编程,代码">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C3P0连接MySQL的一些问题">
+<meta property="og:url" content="https://lingyue9.github.io/2020/09/21/C3P0连接MySQL的一些问题/index.html">
 <meta property="og:site_name" content="翎月的博客">
+<meta property="og:description" content="在最近下载了最新版本的MySQL(5.7.31)后，使用C3P0连接MySQL数据库时报错：1java.sql.SQLException: Connections could not be acquired from the underlying database!">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2020-09-26T11:09:08.255Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="翎月的博客">
+<meta name="twitter:title" content="C3P0连接MySQL的一些问题">
+<meta name="twitter:description" content="在最近下载了最新版本的MySQL(5.7.31)后，使用C3P0连接MySQL数据库时报错：1java.sql.SQLException: Connections could not be acquired from the underlying database!">
   
     <link rel="alternative" href="/atom.xml" title="翎月的博客" type="application/atom+xml">
   
@@ -151,49 +155,139 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-C3P0连接MySQL的一些问题" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/10/Java反射/" class="archive-article-date">
-  	<time datetime="2019-04-10T02:30:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-10</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/10/Java反射/">Java反射</a>
+    <h1 class="article-title" itemprop="name">
+      C3P0连接MySQL的一些问题
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
+        
+        <a href="/2020/09/21/C3P0连接MySQL的一些问题/" class="archive-article-date">
+  	<time datetime="2020-09-21T02:30:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在最近下载了最新版本的MySQL(5.7.31)后，使用C3P0连接MySQL数据库时报错：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">java</span><span class="selector-class">.sql</span><span class="selector-class">.SQLException</span>: <span class="selector-tag">Connections</span> <span class="selector-tag">could</span> <span class="selector-tag">not</span> <span class="selector-tag">be</span> <span class="selector-tag">acquired</span> <span class="selector-tag">from</span> <span class="selector-tag">the</span> <span class="selector-tag">underlying</span> <span class="selector-tag">database</span>!</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>一番查询之后，发现是url需要添加后缀<br>url一般为 jdbc:mysql://localhost:3306/chatnet?useUnicode=true&amp;characterEncoding=utf-8&amp;serverTimezone=GMT%2B8</p>
+<hr>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="https://blog.csdn.net/qq_42183409/article/details/89422142" target="_blank" rel="noopener"></a></p>
 
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACtUlEQVR42u3awW7cMAwE0P7/T7dATwUKe2dIqUmB51OQ7Fp6u4CpDPnjR3z9/H09/f7P6+mv7bvyPRy48PDw8EZbf7r+vnW+6dl93neYr4WHh4d3m/f+IM557fL54/5pPx/uhoeHh/elvPcFZofjpDwkq+Ph4eF9T167cL7p9yM4Hh4e3vfk5cvkMUEb+27YB7IWPDw8vJi3CQK+6ueL/T08PDy8RVd908rKA9w88qj3iYeHh3eB17bwN6/f/L4NlA9sFw8PDy/YSTtElReG2Ydy6tCPh4eHd5bXhrb3Dr6zoPbDsAIeHh7eNV47HDAbOMhbVpsg48DsAx4eHt7oGL3pKyUjAm0oPAsp8PDw8O7x8sbV7Fg8KzDtwNZjYcDDw8M7yttEpW04mxyd85Zb+w8AHh4e3ileHhy0i+XbbWFFIIKHh4d3gdc+iPNG1LGtlMioUOHh4eEteKfGp2btsX3Q8KFo4eHh4V3gtWMEbZFox7NmB/qo4uHh4eEd4iUP96Rhnz/o8wJwIN7Fw8PDu8DbM9oCkwS4p8YL8PDw8O7x3rc1O+y+H7v3ZaaOQvDw8PCO8k4FtW0bbDNwkH8leHh4eGd5G0Y79zorEsO52v23hIeHhzd6WM/aWvvAIgEXh2w8PDy8f8Jrb5osNhsCmEUbeHh4eLd5+/bVrGzMRgfyMBcPDw/vHu/eaNSscZUXkigWwcPDw7vGm8W77Xtz8CzG/TATgYeHh7fmbcKFdmQqjxvaFtpj6cLDw8O7wNvUk/bA3Q4ZzBpyw4EDPDw8vJK3KQZ5LLsZTUgKw+OHiIeHh3eNd/YBPWtWbQIIPDw8vP+Rt2mJteFCcqDHw8PD+w68OsNYg9+LzeHCgIeHh3chjGgP021U0QbEwxM3Hh4e3pq3aYAlr0zaVKdCjSEbDw8PL+X9AjKaNcoJS+6wAAAAAElFTkSuQmCC" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/06/07/Spring基于XML装配Bean/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Spring基于XML装配Bean</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -216,8 +310,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

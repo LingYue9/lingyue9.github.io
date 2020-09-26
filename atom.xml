@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lingyue9.github.io/"/>
-  <updated>2020-09-24T15:27:51.568Z</updated>
+  <updated>2020-09-26T11:09:08.255Z</updated>
   <id>https://lingyue9.github.io/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C3P0连接MySQL的一些问题</title>
+    <link href="https://lingyue9.github.io/2020/09/21/C3P0%E8%BF%9E%E6%8E%A5MySQL%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/"/>
+    <id>https://lingyue9.github.io/2020/09/21/C3P0连接MySQL的一些问题/</id>
+    <published>2020-09-21T02:30:24.000Z</published>
+    <updated>2020-09-26T11:09:08.255Z</updated>
+    
+    <content type="html"><![CDATA[<p>在最近下载了最新版本的MySQL(5.7.31)后，使用C3P0连接MySQL数据库时报错：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">java</span><span class="selector-class">.sql</span><span class="selector-class">.SQLException</span>: <span class="selector-tag">Connections</span> <span class="selector-tag">could</span> <span class="selector-tag">not</span> <span class="selector-tag">be</span> <span class="selector-tag">acquired</span> <span class="selector-tag">from</span> <span class="selector-tag">the</span> <span class="selector-tag">underlying</span> <span class="selector-tag">database</span>!</span><br></pre></td></tr></table></figure></p><a id="more"></a><p>一番查询之后，发现是url需要添加后缀<br>url一般为 jdbc:mysql://localhost:3306/chatnet?useUnicode=true&amp;characterEncoding=utf-8&amp;serverTimezone=GMT%2B8</p><hr><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="https://blog.csdn.net/qq_42183409/article/details/89422142" target="_blank" rel="noopener"></a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在最近下载了最新版本的MySQL(5.7.31)后，使用C3P0连接MySQL数据库时报错：&lt;br&gt;&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;selector-class&quot;&gt;.sql&lt;/span&gt;&lt;span class=&quot;selector-class&quot;&gt;.SQLException&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;Connections&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;could&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;be&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;acquired&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;underlying&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;database&lt;/span&gt;!&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Spring基于XML装配Bean</title>
