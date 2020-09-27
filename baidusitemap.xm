@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://lingyue9.github.io/2019/05/12/IDEA%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
+    <lastmod>2020-09-27</lastmod>
+  </url>
+  <url>
     <loc>https://lingyue9.github.io/2020/09/21/C3P0%E8%BF%9E%E6%8E%A5MySQL%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/</loc>
     <lastmod>2020-09-26</lastmod>
   </url>
